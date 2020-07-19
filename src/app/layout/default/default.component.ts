@@ -1,26 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
-
-declare class ScreenList {
-  Xs?: string;
-  GtXs?: string;
-
-  Sm?: string;
-  LtSm?: string;
-  GtSm?: string;
-
-  Md?: string;
-  LtMd?: string;
-  GtMd?: string;
-
-  Lg?: string;
-  LtLg?: string;
-  GtLg?: string;
-
-  Xl?: string;
-  LtXl?: string;
-}
+import {
+  MediaObserverService,
+  ScreenList
+} from 'src/app/shared/services/media-observer.service';
 
 @Component({
   selector: 'app-default',
@@ -28,22 +11,19 @@ declare class ScreenList {
   styleUrls: ['./default.component.scss']
 })
 export class DefaultComponent implements OnInit, OnDestroy {
-
   matchedScreenList: ScreenList = {};
   watcher: Subscription;
   toggleSidenav = true;
 
-  constructor(public mediaObserver: MediaObserver) { }
+  constructor(private media: MediaObserverService) {}
 
   ngOnInit() {
-    this.watcher = this.mediaObserver.asObservable().subscribe((changes: MediaChange[]) => {
-      const LIST = {};
-      changes.forEach(change => {
-        LIST[change.suffix] = change.matches;
+    this.watcher = this.media
+      .getMatchedScreenList()
+      .subscribe(matchedScreens => {
+        this.matchedScreenList = { ...matchedScreens };
+        console.log(this.matchedScreenList);
       });
-      this.matchedScreenList = { ...LIST };
-      console.log(this.matchedScreenList);
-    });
   }
 
   toggleSidebar() {
@@ -53,5 +33,4 @@ export class DefaultComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.watcher.unsubscribe();
   }
-
 }
