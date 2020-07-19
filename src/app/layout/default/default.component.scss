@@ -1,5 +1,9 @@
 :host {
-    mat-drawer-container {
-        height: 85%;
-    }
+  .sidenav-container {
+    height: calc(100vh - 2 * 64px); // 64px for header and footer each
+  }
+
+  .sidenav {
+    width: 250px;
+  }
 }

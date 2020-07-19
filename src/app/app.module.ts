@@ -7,6 +7,7 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { DefaultModule } from './layout/default/default.module';
 
 import { AppComponent } from './app.component';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,12 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     DefaultModule,
-    DashboardModule
+    DashboardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
