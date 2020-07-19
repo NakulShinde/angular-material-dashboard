@@ -1,9 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import {
-  MediaObserverService,
-  ScreenList
-} from 'src/app/shared/services/media-observer.service';
+
+import { MediaObserverService } from 'src/app/shared/services/media-observer.service';
+import { ScreenList } from 'src/app/shared/interfaces/screen-list';
 
 @Component({
   selector: 'app-default',
@@ -15,14 +14,13 @@ export class DefaultComponent implements OnInit, OnDestroy {
   watcher: Subscription;
   toggleSidenav = true;
 
-  constructor(private media: MediaObserverService) {}
+  constructor(private media: MediaObserverService) { }
 
   ngOnInit() {
     this.watcher = this.media
       .getMatchedScreenList()
       .subscribe(matchedScreens => {
         this.matchedScreenList = { ...matchedScreens };
-        console.log(this.matchedScreenList);
       });
   }
 

@@ -4,25 +4,7 @@ import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-export declare class ScreenList {
-  Xs?: string;
-  GtXs?: string;
-
-  Sm?: string;
-  LtSm?: string;
-  GtSm?: string;
-
-  Md?: string;
-  LtMd?: string;
-  GtMd?: string;
-
-  Lg?: string;
-  LtLg?: string;
-  GtLg?: string;
-
-  Xl?: string;
-  LtXl?: string;
-}
+import { ScreenList } from '../interfaces/screen-list';
 
 @Injectable({
   providedIn: 'root'
