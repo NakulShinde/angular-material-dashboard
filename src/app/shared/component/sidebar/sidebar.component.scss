@@ -1,5 +1,13 @@
 :host {
-  .mat-toolbar {
+  mat-toolbar {
     background: inherit;
+  }
+  mat-nav-list {
+    a {
+      &.router-link-active {
+        background: rgba(103, 58, 183, 0.15);
+        color: #673ab7;
+      }
+    }
   }
 }

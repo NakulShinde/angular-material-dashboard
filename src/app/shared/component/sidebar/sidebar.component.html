@@ -1,6 +1,9 @@
 <mat-toolbar>Menu</mat-toolbar>
-<mat-nav-list>
-  <a mat-list-item href="#">Link 1</a>
-  <a mat-list-item href="#">Link 2</a>
-  <a mat-list-item href="#">Link 3</a>
+<mat-nav-list role="navigation">
+  <a mat-list-item [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
+    Dashboard
+  </a>
+  <a mat-list-item [routerLink]="['/pages']" routerLinkActive="router-link-active">
+    Pages
+  </a>
 </mat-nav-list>
