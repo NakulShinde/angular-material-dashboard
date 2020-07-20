@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { MatDividerModule, MatCardModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     FlexLayoutModule,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
+    SharedModule
   ],
   exports: [
     DashboardComponent
