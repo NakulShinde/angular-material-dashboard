@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatDividerModule } from '@angular/material/divider';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { MaterialModule } from 'src/app/shared/material/material.module';
 
 import { DefaultComponent } from './default.component';
 
@@ -15,9 +14,8 @@ import { DefaultComponent } from './default.component';
   imports: [
     CommonModule,
     RouterModule,
-    MatSidenavModule,
-    MatDividerModule,
-    SharedModule
+    SharedModule,
+    MaterialModule
   ],
   exports: [
     DefaultComponent
