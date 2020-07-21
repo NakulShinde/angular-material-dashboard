@@ -10,13 +10,21 @@ import { FooterComponent } from './component/footer/footer.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { AreaComponent } from './widgets/area/area.component';
 import { MaterialModule } from './material/material.module';
+import { PieComponent } from './widgets/pie/pie.component';
+import { BarComponent } from './widgets/bar/bar.component';
+import { LineComponent } from './widgets/line/line.component';
+import { TableComponent } from './widgets/table/table.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent
+    AreaComponent,
+    PieComponent,
+    BarComponent,
+    LineComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +37,11 @@ import { MaterialModule } from './material/material.module';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent
+    AreaComponent,
+    PieComponent,
+    BarComponent,
+    LineComponent,
+    TableComponent
   ]
 })
 export class SharedModule { }

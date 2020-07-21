@@ -10,11 +10,19 @@
   fxLayoutAlign="space-between"
   fxFlexAlign="center"
   fxLayout.lt-sm="column"
-  fxLayoutGap="10px">
-  <mat-card fxFlex="25">Graph</mat-card>
-  <mat-card fxFlex="25">Graph</mat-card>
-  <mat-card fxFlex="25">Graph</mat-card>
-  <mat-card fxFlex="25">Graph</mat-card>
+  fxLayoutGap="1">
+  <mat-card fxFlex="24">
+    <app-widget-pie></app-widget-pie>
+  </mat-card>
+  <mat-card fxFlex="24">
+    <app-widget-bar></app-widget-bar>
+  </mat-card>
+  <mat-card fxFlex="24">
+    <app-widget-pie></app-widget-pie>
+  </mat-card>
+  <mat-card fxFlex="24">
+    <app-widget-bar></app-widget-bar>
+  </mat-card>
 </div>
 <mat-divider></mat-divider>
 <div
@@ -24,6 +32,10 @@
   fxFlexAlign="center"
   fxLayout.lt-sm="column"
   fxLayoutGap="10px">
-  <mat-card fxFlex="40">Donut Chart</mat-card>
-  <mat-card fxFlex="60">Table</mat-card>
+  <mat-card fxFlex="40">
+    <app-widget-line></app-widget-line>
+  </mat-card>
+  <mat-card fxFlex="60">
+    <app-widget-table></app-widget-table>
+  </mat-card>
 </div>
