@@ -1,6 +1,6 @@
-## Angular Material Dashboard
+# Angular Material Dashboard
 
-> POC and hands-on projects to try and learn Angular and web related skills.
+> POC and hands-on project to showcase Angular and web related skills.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
@@ -36,7 +36,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
-> [In Progress]
+> [In progress]
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
